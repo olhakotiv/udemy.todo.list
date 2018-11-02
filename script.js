@@ -1,11 +1,11 @@
-var button = document.getElementById("enter");
-var input = document.getElementById("userinput");
-var ul = document.querySelector("ul");
-var li = document.querySelectorAll("li");
+var button = document.getElementById("enter"),
+    input = document.getElementById("userinput"),
+    ul = document.querySelector("ul"),
+    li = document.querySelectorAll("li");
 
 function inputLength() {
     return input.value.length;
-}
+};
 
 function createListElement() {
     var li = document.createElement("li");
@@ -16,21 +16,21 @@ function createListElement() {
     li.appendChild(newButton);
     ul.appendChild(li);
     input.value = "";
-}
+};
 
 function addListAfterClick() {
     if (inputLength() > 0) {
         createListElement();
         createDeleteButton();
-    }
-}
+    };
+};
 
 function addListAfterKeypress(event) {
     if (inputLength() > 0 && event.keyCode === 13) {
         createListElement();
         createDeleteButton();
-    }
-}
+    };
+};
 
 ul.addEventListener("click", e => {
     if (e.target.localName === "button") {
