@@ -32,7 +32,7 @@ function addListAfterKeypress(event) {
     };
 };
 
-ul.addEventListener("click", e => {
+ul.addEventListener("click", function(e) {
     if (e.target.localName === "button") {
         e.target.parentNode.remove();
     } else if (e.target.localName === "li") {
